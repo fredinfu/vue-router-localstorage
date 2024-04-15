@@ -15,7 +15,7 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/bulbasaur">Bulbasaur</RouterLink>
         <RouterLink to="/charmander">Charmander</RouterLink>
-        <RouterLink to="/bulbasaur">Squirtle</RouterLink>
+        <RouterLink to="/squirtle">Squirtle</RouterLink>
       </nav>
     </div>
   </header>

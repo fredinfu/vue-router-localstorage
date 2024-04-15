@@ -4,7 +4,7 @@
     <h2>Name</h2>
     <h1>{{ pokemon.name }}</h1>
     <h2>Type</h2>
-    <h1>{{ pokemon.type }}</h1>
+    <h1>{{ pokemon.type }} {{ pokemon2.type == "water"? "WEAK" : pokemon2.type == "grass" ? "STRONG" : ""  }}</h1>
     <button @click="storeLocalStorage" class="textbox">Local Storage Set Item</button>
 
     <br>

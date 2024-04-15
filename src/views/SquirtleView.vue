@@ -4,7 +4,7 @@
     <h2>Name</h2>
     <h1>{{ pokemon.name }}</h1>
     <h2>Type</h2>
-    <h1>{{ pokemon.type }} {{ pokemon2.type == "water"? "STRONG" : pokemon2.type == "fire" ? "WEAK" : ""  }}</h1>
+    <h1>{{ pokemon.type }} {{ pokemon2.type == "grass"? "WEAK" : pokemon2.type == "fire" ? "STRONG" : ""  }}</h1>
     <button @click="storeLocalStorage" class="textbox">Local Storage Set Item</button>
 
     <br>
@@ -25,7 +25,7 @@
   import axios from 'axios';
 
   export default {
-    name: 'Bulbasaur',
+    name: 'Squirtle',
     data() {
       return {
         pokemon: {
@@ -56,7 +56,7 @@
 
         try {
             const img = document.getElementById("pokemonSprite");
-            const url = "https://pokeapi.co/api/v2/pokemon/1";
+            const url = "https://pokeapi.co/api/v2/pokemon/7";
             const response = await axios.get(url);
             this.pokemon.name = response.data.name;
             this.pokemon.img = response.data.sprites.front_default;
