@@ -20,7 +20,9 @@ cd vue-router-localstorage/
 # Características principales:
 
 Almacenamiento clave-valor: localStorage almacena datos en pares de clave-valor. Cada clave debe ser única dentro del mismo origen.
+
 Persistencia: Los datos almacenados en localStorage son persistentes, lo que significa que se conservan incluso después de cerrar la pestaña o el navegador.
+
 Sincronización: localStorage está disponible en todas las pestañas y ventanas del mismo origen. Esto significa que los datos se pueden compartir entre diferentes partes de la misma aplicación web.
 
 ![image](https://github.com/fredinfu/vue-router-localstorage/assets/23424560/c844497b-493c-4423-ba1f-aec3a4c3ad52)
