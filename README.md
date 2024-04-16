@@ -1,14 +1,20 @@
 # vue-router-localstorage
 
-This template should help get you started developing with Vue 3 in Vite.
+Vue.js Router es una biblioteca oficial para el enrutamiento en aplicaciones Vue.js. 
 
-## Recommended IDE Setup
+## Caracteristicas principales
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+* Anidamiento de rutas: Permite crear estructuras de rutas jerárquicas para aplicaciones complejas.
+* Guardias de ruta: Permite controlar el acceso a las rutas y redirigir a los usuarios según determinadas condiciones.
+* Enlaces dinámicos: Permite crear enlaces dinámicos que se actualizan automáticamente en función de los datos del componente.
 
-## Customize configuration
+## Agregando Vue Router SPA al comenzar proyecto
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+![image](https://github.com/fredinfu/vue-router-localstorage/assets/23424560/d9f5af46-45ed-46ef-9276-cb49d9f3d565)
+
+```sh
+cd vue-router-localstorage/
+```
 
 ## Project Setup
 
