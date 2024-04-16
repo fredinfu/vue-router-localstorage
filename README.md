@@ -8,7 +8,7 @@ Vue.js Router es una biblioteca oficial para el enrutamiento en aplicaciones Vue
 * Guardias de ruta: Permite controlar el acceso a las rutas y redirigir a los usuarios según determinadas condiciones.
 * Enlaces dinámicos: Permite crear enlaces dinámicos que se actualizan automáticamente en función de los datos del componente.
 
-## Agregando Vue Router SPA al comenzar proyecto
+### Agregando Vue Router SPA al comenzar proyecto
 
 ![image](https://github.com/fredinfu/vue-router-localstorage/assets/23424560/d9f5af46-45ed-46ef-9276-cb49d9f3d565)
 
