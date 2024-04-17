@@ -17,7 +17,8 @@ Vue.js Router es una biblioteca oficial para el enrutamiento en aplicaciones Vue
 
 Una vez creado el proyecto en el archivo podemos ver que se creo una carpeta "router" y un archivo index.js en la ubicacion ./proyecto/src/router/index.js
 
-Podemos ver que se agregaron rutas adicionales para proposito de ver como funciona el router, las rutas agregadas son /bulbasaur, /charmander y /squirtle
+Podemos ver que se agregaron rutas adicionales para proposito de ver como funciona el router, las rutas agregadas son /bulbasaur, /charmander y /squirtle.
+
 ![image](https://github.com/fredinfu/vue-router-localstorage/assets/23424560/ecfc1f83-79f1-4fb6-93e5-4f3eac7a1f34)
 
 Tambien se agrego modificaciones en ./proyecto/src/main.js podemos ver que en la linea 5 y 9 se agrego el uso de router.
