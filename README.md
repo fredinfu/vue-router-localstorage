@@ -1,4 +1,4 @@
-# vue-router
+# Router
 
 Vue.js Router es una biblioteca oficial para el enrutamiento en aplicaciones Vue.js. 
 
@@ -11,6 +11,10 @@ Vue.js Router es una biblioteca oficial para el enrutamiento en aplicaciones Vue
 ### Agregando Vue Router SPA al comenzar proyecto
 
 ![image](https://github.com/fredinfu/vue-router-localstorage/assets/23424560/d9f5af46-45ed-46ef-9276-cb49d9f3d565)
+
+```sh
+cd vue-router-localstorage/
+```
 
 ### Archivos y configuraciones agregadas
 
@@ -25,10 +29,7 @@ Tambien se agrego modificaciones en ./proyecto/src/main.js podemos ver que en la
 ![image](https://github.com/fredinfu/vue-router-localstorage/assets/23424560/c683ab47-78ab-4e70-bfaa-3d9822a090ac)
 
 
-```sh
-cd vue-router-localstorage/
-```
-# vue-localStorage
+# LocalStorage
 
 ### Características principales
 
