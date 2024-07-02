@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <img src="" alt="Pokemon Sprite" id="pokemonSprite" style="display: none;">    
+    <img src="" alt="Pokemon Sprite" id="pokemonSprite" style="display: none;" @click="bulbasound">    
     <h2>Name</h2>
     <h1>{{ pokemon.name }}</h1>
     <div v-if="token">
@@ -65,6 +65,9 @@
       }
     },
     methods: {
+      bulbasound(){
+        alert('Bulbaaa');
+      },
       storeLocalStorage() {
         localStorage.setItem("pokemon.name", this.pokemon.name);
         var pokemonJson = JSON.stringify(this.pokemon);
