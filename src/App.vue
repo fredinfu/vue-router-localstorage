@@ -1,6 +1,17 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+  import { RouterLink, RouterView } from 'vue-router'
+  import { useAuthStore } from './stores/AuthStore'
+
+  var thisToken = null;
+  const authStore = useAuthStore();
+
+  const tokenAsync = () => {
+    thisToken = authStore.getTokenAsync;
+  }
+  const showToken = () => {
+    console.log(authStore.token);
+  }
+
 </script>
 
 <template>
@@ -9,7 +20,6 @@ import HelloWorld from './components/HelloWorld.vue'
 
     <div class="wrapper">
       <!-- <HelloWorld msg="You did it!" /> -->
-
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
@@ -17,6 +27,11 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/charmander">Charmander</RouterLink>
         <RouterLink to="/squirtle">Squirtle</RouterLink>
       </nav>
+
+      <button @click="authStore.getToken" type="button">Get Token</button>
+      <button @click="tokenAsync" type="button">Get Token Async</button>
+      <button @click="showToken" type="button">Show Token</button>
+
     </div>
   </header>
 

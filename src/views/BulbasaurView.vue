@@ -1,28 +1,36 @@
 <template>
   <div class="about">
-    <img src="" alt="Pokemon Sprite" id="pokemonSprite" style="display: none;">
+    <img src="" alt="Pokemon Sprite" id="pokemonSprite" style="display: none;">    
     <h2>Name</h2>
     <h1>{{ pokemon.name }}</h1>
-    <h2>Type</h2>
-    <h1>{{ pokemon.type }} {{ pokemon2.type == "water"? "STRONG" : pokemon2.type == "fire" ? "WEAK" : ""  }}</h1>
-    <button @click="storeLocalStorage" class="textbox">Local Storage Set Item</button>
+    <div v-if="token">
+      <h1>Token access {{ token }}</h1>
+      <h1>Type</h1>
+      <h1>{{ pokemon.type }} {{ pokemon2.type == "water"? "STRONG" : pokemon2.type == "fire" ? "WEAK" : ""  }}</h1>
+      <button @click="storeLocalStorage" class="textbox">Local Storage Set Item</button>
 
-    <br>
-    <br>
-    
-    <img src="" alt="Pokemon Sprite" id="pokemonSprite2" style="display: none;">
-    <p> Local Storage Pokemon</p>
-    <button @click="getLocalStorage" class="textbox">Local Storage Get Item</button>
-    <h2>Name</h2>
-    <h1>{{ pokemon2.name }}</h1>
-    <h2>Type</h2>
-    <h1>{{ pokemon2.type }}</h1>
+      <br>
+      <br>
+      
+      <img src="" alt="Pokemon Sprite" id="pokemonSprite2" style="display: none;">
+      <p> Local Storage Pokemon</p>
+      <button @click="getLocalStorage" class="textbox">Local Storage Get Item</button>
+      <h2>Name</h2>
+      <h1>{{ pokemon2.name }}</h1>
+      <h2>Type</h2>
+      <h1>{{ pokemon2.type }}</h1>
+      
+      <button @click="showToken" type="button">Show Token</button>
+    </div>
 
   </div>
 </template>
 
 <script>
   import axios from 'axios';
+  import { useAuthStore } from '@/stores/AuthStore';
+
+  const authStore = useAuthStore();
 
   export default {
     name: 'Bulbasaur',
@@ -37,41 +45,24 @@
           name: "",
           type: "",
           img: ""
-        }
+        },
+        token: ""
       }
     },
-    beforeCreate: function () {
-        console.log('beforeCreate')
-    },
-    created: function () {
-        console.log('created')
-
-    },
-    beforeMount: async function () {
-        console.log('beforeMount')
-
-    },
     mounted: async function () {
-        console.log('mounted')
-
-        try {
-            const img = document.getElementById("pokemonSprite");
-            const url = "https://pokeapi.co/api/v2/pokemon/1";
-            const response = await axios.get(url);
-            this.pokemon.name = response.data.name;
-            this.pokemon.img = response.data.sprites.front_default;
-            this.pokemon.type = response.data.types[0].type.name
-            img.src = response.data.sprites.front_default;
-            img.style.display = "block"
-        } catch (error) {
-            console.error(error);
-        }
-    },
-    beforeUpdate: function () {
-        console.log('beforeUpdate')
-    },
-    updated: function () {
-        console.log('updated')
+      this.token = authStore.token;
+      try {
+          const img = document.getElementById("pokemonSprite");
+          const url = "https://pokeapi.co/api/v2/pokemon/1";
+          const response = await axios.get(url);
+          this.pokemon.name = response.data.name;
+          this.pokemon.img = response.data.sprites.front_default;
+          this.pokemon.type = response.data.types[0].type.name
+          img.src = response.data.sprites.front_default;
+          img.style.display = "block"
+      } catch (error) {
+          console.error(error);
+      }
     },
     methods: {
       storeLocalStorage() {
@@ -86,7 +77,11 @@
         const img = document.getElementById("pokemonSprite2");
         img.src = this.pokemon2.img;
         img.style.display = "block"
+      },
+      showToken() {
+        console.log(authStore.token);
       }
+
     }
   }
 </script>
