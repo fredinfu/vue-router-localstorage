@@ -22,7 +22,6 @@
       <!-- <HelloWorld msg="You did it!" /> -->
       <nav>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/bulbasaur">Bulbasaur</RouterLink>
         <RouterLink to="/charmander">Charmander</RouterLink>
         <RouterLink to="/squirtle">Squirtle</RouterLink>
