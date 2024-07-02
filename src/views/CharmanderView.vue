@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <img src="" alt="Pokemon Sprite" id="pokemonSprite" style="display: none;">
+    <img src="" alt="Pokemon Sprite" id="pokemonSprite" style="display: none;" @click="char_voice">
     <h2>Name</h2>
     <h1>{{ pokemon.name }}</h1>
     <h2>Type</h2>
@@ -74,6 +74,9 @@
         console.log('updated')
     },
     methods: {
+      char_voice (){
+    console.log('char..char...');
+  },
       storeLocalStorage() {
         localStorage.setItem("pokemon.name", this.pokemon.name);
         var pokemonJson = JSON.stringify(this.pokemon);
@@ -89,6 +92,8 @@
       }
     }
   }
+
+  
 </script>
 
 <style>
