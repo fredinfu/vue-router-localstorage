@@ -4,7 +4,8 @@
     <h2>Name</h2>
     <h1>{{ pokemon.name }}</h1>
     <div v-if="token">
-      <h1>Token access {{ token }}</h1>
+      <h1>Token access antes se mostraba ahora ya no.....valvasaaar</h1>
+      <p>Camaron caramelo, caramelo camaron</p>
       <h1>Type</h1>
       <h1>{{ pokemon.type }} {{ pokemon2.type == "water"? "STRONG" : pokemon2.type == "fire" ? "WEAK" : ""  }}</h1>
       <button @click="storeLocalStorage" class="textbox">Local Storage Set Item</button>
